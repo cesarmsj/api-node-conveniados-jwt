@@ -14,7 +14,7 @@ Enable TCP/IP in SQL Server Configuration Manager -> SQL Server Network Configur
 
 ## Adjusting the database connection parameters
 
-Adjusting the database connection parameters
+Replace username and password in config/config.json
 
 ## Running
 
