@@ -4,7 +4,7 @@
 
 API developed in javascript to be executed in node using express and sequelize.
 
-## Install
+## Install node dependencies
 
 npm install
 
