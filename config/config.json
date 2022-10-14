@@ -1,0 +1,18 @@
+{
+    "dbName": "Conveniados",
+    "dbConfig": {
+        "server": "localhost",
+        "options": {
+            "port": 1433,
+            "trustServerCertificate": true
+        },
+        "authentication": {
+            "type": "default",
+            "options": {
+                "userName": "cesarmsj",
+                "password": "123456"
+            }
+        }
+    },
+    "secret": "bF7Iu7@@57bWAyE@FsLLcfltykUlEN"
+}
