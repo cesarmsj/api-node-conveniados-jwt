@@ -6,6 +6,7 @@ const validateRequest = require('../middleware/validate-request');
 const authorize = require('../middleware/authorize')
 const usuarioService = require('../services/usuarios.service');
 const conveniadoService = require('../services/conveniados.service');
+const { response } = require('../app');
 
 router.post('/authenticate', authenticateSchema, authenticate);
 router.post('/register', registerSchema, register);
@@ -22,7 +23,14 @@ function authenticateSchema(req, res, next) {
 
 function authenticate(req, res, next) {
     usuarioService.authenticate(req.body)
-        .then(user => res.json(user))
+        .then(
+            response => {
+                if (response.status === 401) {
+                    return res.status(401).json({ status: 401, message: 'Credenciais inválidas', })
+                } 
+                res.json(response)
+            }
+        )
         .catch(next);
 }
 
